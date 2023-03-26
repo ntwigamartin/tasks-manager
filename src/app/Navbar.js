@@ -7,6 +7,7 @@ function Navbar(){
         <nav>
             <h3>Tasks Manager</h3>
             <Link to="/login" >Login</Link>
+            <Link to="/signup" >Signup</Link>
             <Link to="/" >Logout</Link>
         </nav>
     )
