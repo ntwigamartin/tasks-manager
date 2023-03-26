@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/tasks" element={<Tasks />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
       </Routes>
     </BrowserRouter>

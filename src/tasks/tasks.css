@@ -1,10 +1,17 @@
+.tasks-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-tasks {
+    margin-right: 20%;
+}
+
 .add-tasks > form {
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
-.add-tasks >h3 {
-    text-align: center;
+.tasks-list {
+    margin-left: 30%;
 }
