@@ -8,12 +8,12 @@ nav {
 
 nav > a {
     padding: 10px;
-    color: aquamarine;
+    color: rgb(127, 246, 255);
     text-decoration: none;
     margin-right: 15px;
 }
 
 nav > h3 {
-    color: aquamarine;
+    color: rgb(127, 246, 255);
     margin-left: 15px;
 }
