@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListTasks(){
+function ListTasks({tasks}){
     return (
         <div className='tasks-list' >
             <h3>Tasks List</h3>
@@ -14,12 +14,14 @@ function ListTasks(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>title</td>
-                        <td>description</td>
-                        <td>status</td>
-                        <td>priority</td>
-                    </tr>
+                    {tasks.map(task => 
+                        <tr>
+                            <td>{task.title}</td>
+                            <td>{task.description}</td>
+                            <td>{task.status}</td>
+                            <td>{task.priority}</td>
+                        </tr>
+                        )}
                 </tbody>
             </table>
         </div>
@@ -27,3 +29,10 @@ function ListTasks(){
 }
 
 export default ListTasks;
+
+<tr>
+<td>title</td>
+<td>description</td>
+<td>status</td>
+<td>priority</td>
+</tr>
