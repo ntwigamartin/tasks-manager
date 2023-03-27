@@ -15,7 +15,7 @@ function Tasks(){
     return (
        <div className="tasks-container" >
          <ListTasks tasks={tasks} />
-         <AddTasks />
+         <AddTasks setTasks={setTasks} tasks={tasks}/>
        </div>
     )
 }

@@ -29,10 +29,3 @@ function ListTasks({tasks}){
 }
 
 export default ListTasks;
-
-<tr>
-<td>title</td>
-<td>description</td>
-<td>status</td>
-<td>priority</td>
-</tr>
