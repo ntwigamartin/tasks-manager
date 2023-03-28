@@ -17,7 +17,7 @@ function AddTasks({setTasks, tasks}){
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3000/tasks', {
+        fetch('https://bing-todos.onrender.com/todos', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)

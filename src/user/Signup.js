@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import './User.css'
 
 function Signup() {
@@ -17,7 +18,6 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(body)
         fetch('https://bing-todos.onrender.com/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -59,7 +59,7 @@ function Signup() {
                 />
                 <button type="submit">Register</button>
             </form>
-            <button type="">Already signedup? Login</button>
+            <button type="button"><Link to="/" >Already signedup? Login</Link></button>
         </div>
     )
 }

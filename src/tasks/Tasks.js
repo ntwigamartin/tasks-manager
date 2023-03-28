@@ -7,9 +7,9 @@ function Tasks(){
     const [tasks, setTasks] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/tasks')
+        fetch('https://bing-todos.onrender.com/todos')
         .then(res=>res.json())
-        .then(data=>setTasks(data))
+        .then(data=>console.log(data.data))
     },[])
   
     return (
