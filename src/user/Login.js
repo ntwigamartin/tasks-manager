@@ -37,7 +37,7 @@ function Login() {
                 />
                 <button type="submit">Log In</button>
             </form>
-            <button type="">Register</button>
+            <button type="">Not a user? Register</button>
         </div>
     )
 }
