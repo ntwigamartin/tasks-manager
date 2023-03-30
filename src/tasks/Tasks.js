@@ -9,12 +9,28 @@ function Tasks(){
     useEffect(()=>{
         fetch('https://bing-todos.onrender.com/todos')
         .then(res=>res.json())
-        .then(data=>console.log(data.data))
+        .then(data=>setTasks(data))
     },[])
   
+  function handleDelete(id) {
+    fetch(`https://bing-todos.onrender.com/todos/${id}`, { 
+      method: 'DELETE' })
+      .then(res => {
+        if (res.ok) {
+            const updatedTasks = tasks.filter(task => task.id !== id);
+            setTasks(updatedTasks);
+        } else {
+            throw new Error('Failed to delete task');
+        }
+    })
+    .catch(err => {
+        console.error(err);
+    });
+  }
+
     return (
        <div className="tasks-container" >
-         <ListTasks tasks={tasks} />
+         <ListTasks tasks={tasks} handleDelete={handleDelete} />
          <AddTasks setTasks={setTasks} tasks={tasks}/>
        </div>
     )
