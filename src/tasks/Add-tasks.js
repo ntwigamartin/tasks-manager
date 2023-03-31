@@ -17,6 +17,7 @@ function AddTasks({setTasks, tasks}){
     
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(body);
         fetch('https://bing-todos.onrender.com/todos', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -25,8 +26,7 @@ function AddTasks({setTasks, tasks}){
         .then(res=>res.json())
         .then(data=>setTasks([...tasks, data]))
     }
-    
-    
+        
     return (
         <div className='add-tasks' >
             <h3>Add a New Task</h3>
@@ -39,17 +39,17 @@ function AddTasks({setTasks, tasks}){
 
                 <label htmlFor='status' >Status</label>
                 <select value={status} onChange={(e)=>setStatus(e.target.value)} >
-                    <option >CREATED</option>
-                    <option >STARTED</option>
-                    <option >COMPLETED</option>
-                    <option >CANCELLED</option>
+                    <option>CREATED</option>
+                    <option>STARTED</option>
+                    <option>COMPLETED</option>
+                    <option>CANCELLED</option>
                 </select>
 
                 <label htmlFor='priority' >Priority</label>
                 <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
-                    <option >LOW</option>
-                    <option >MEDIUM</option>
-                    <option >HIGH</option>
+                    <option>LOW</option>
+                    <option>MEDIUM</option>
+                    <option>HIGH</option>
                 </select>
                 <button >Submit</button>
             </form>

@@ -9,7 +9,7 @@ function Tasks(){
     useEffect(()=>{
         fetch('https://bing-todos.onrender.com/todos')
         .then(res=>res.json())
-        .then(data=>setTasks(data))
+        .then(data=>setTasks(data.data))
     },[])
   
   function handleDelete(id) {
