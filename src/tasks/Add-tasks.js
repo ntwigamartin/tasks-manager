@@ -38,11 +38,19 @@ function AddTasks({setTasks, tasks}){
                 <input type="text" value={description} onChange={(e)=>setDescription(e.target.value)} />
 
                 <label htmlFor='status' >Status</label>
-                <input type="number" value={status} onChange={(e)=>setStatus(e.target.value)} />
+                <select value={status} onChange={(e)=>setStatus(e.target.value)} >
+                    <option >CREATED</option>
+                    <option >STARTED</option>
+                    <option >COMPLETED</option>
+                    <option >CANCELLED</option>
+                </select>
 
                 <label htmlFor='priority' >Priority</label>
-                <input type="number" value={priority} onChange={(e)=>setPriority(e.target.value)} />
-
+                <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
+                    <option >LOW</option>
+                    <option >MEDIUM</option>
+                    <option >HIGH</option>
+                </select>
                 <button >Submit</button>
             </form>
         </div>

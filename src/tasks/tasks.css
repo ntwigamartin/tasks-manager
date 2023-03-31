@@ -4,7 +4,8 @@
 }
 
 .add-tasks {
-    margin-right: 20%;
+    margin-right: 10%;
+    margin-top: 20px;
 }
 
 .add-tasks > form {
@@ -12,6 +13,55 @@
     flex-direction: column;
 }
 
-.tasks-list {
-    margin-left: 30%;
+.add-tasks button {
+    margin-top: 20px;
 }
+
+.tasks-list {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    margin-left: 20%;
+  }
+  
+  .tasks-list h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tasks-list table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .tasks-list th,
+  .tasks-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tasks-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .tasks-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tasks-list button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .tasks-list button:hover {
+    background-color: #3e8e41;
+  }
+  
